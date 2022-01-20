@@ -1,14 +1,12 @@
 import { connect } from "react-redux";
-import WorkoutFormUI from "../components/WorkoutFormUI.jsx";
+import WorkoutFormUI from "../components/WorkoutFormUI";
 import { setWorkoutParamsAction } from "../action";
 
-function mapStateToProps() {
-  console.log("in state");
+function mapStateToProps(state) {
   return {};
 }
 
 function mapDispatchToProps(dispatch) {
-  console.log("in the dispatch");
   return {
     setWorkoutParams: function (data) {
       dispatch(setWorkoutParamsAction(data));

@@ -1,12 +1,14 @@
 import React from "react";
 
-function WorkoutFormUI({}) {
+function WorkoutFormUI({ setWorkoutParams }) {
   function handleSubmit(event) {
+    console.log("submitted");
     event.preventDefault();
     const workoutParams = [];
     for (let i = 0; i < event.target.length; i++) {
       workoutParams.push(event.target[i].value);
     }
+    setWorkoutParams(workoutParams);
   }
 
   return (
