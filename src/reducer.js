@@ -45,6 +45,7 @@ function timers_reducer(state = initialState, action) {
     case "WORKOUT_PARAMS":
       return {
         ...state,
+        ...action.data,
       };
     default:
       return state;
