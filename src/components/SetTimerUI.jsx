@@ -15,11 +15,12 @@ function SetTimerUI({
       setSetTime(repsTimer);
       resetHangTimer();
     } else if (isHangActive) {
-      setTimeout(() => {
+      const timer1 = setTimeout(() => {
         setSetTime((setTime) => {
           return setTime - 1;
         });
       }, 1000);
+      return () => window.clearTimeout(timer1);
     }
   }, [setTime, isHangActive, resetHangTimer, repsTimer]);
   return (
