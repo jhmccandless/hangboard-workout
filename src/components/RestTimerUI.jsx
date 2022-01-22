@@ -15,10 +15,11 @@ function RestTimerUI({
       setRestingTime(restTime);
       resetRestTimer();
     } else if (isRestActive) {
-      setTimeout(() => {
+      const timer1 = setTimeout(() => {
         setRestingTime((restingTime) => {
           return restingTime - 1;
         });
+        return () => window.clearTimeout(timer1);
       }, 1000);
     }
   }, [

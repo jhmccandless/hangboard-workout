@@ -25,7 +25,7 @@ function WorkoutFormUI({ setWorkoutParams, hangTime }) {
         <input type="text" defaultValue="3" name="downTime"></input>
         <br />
         <label htmlFor="restTime">Rest Time</label>
-        <input type="text" defaultValue="3" name="restTime"></input>
+        <input type="text" defaultValue="180" name="restTime"></input>
         <br />
         <label htmlFor="repsTotal">Reps</label>
         <input type="text" defaultValue="6" name="repsTotal"></input>
