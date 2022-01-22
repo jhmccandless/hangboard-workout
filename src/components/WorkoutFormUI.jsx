@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function WorkoutFormUI({ setWorkoutParams, hangTime }) {
+  const navigate = useNavigate();
   function handleSubmit(event) {
     event.preventDefault();
     const workoutParams = {};
@@ -8,6 +10,7 @@ function WorkoutFormUI({ setWorkoutParams, hangTime }) {
       workoutParams[event.target[i].name] = Number(event.target[i].value);
     }
     setWorkoutParams(workoutParams);
+    navigate("/current_workout");
   }
 
   return (
