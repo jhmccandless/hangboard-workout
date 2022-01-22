@@ -1,12 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function WorkoutFormUI({}) {
+function WorkoutFormUI({ setWorkoutParams, hangTime }) {
+  const navigate = useNavigate();
   function handleSubmit(event) {
     event.preventDefault();
-    const workoutParams = [];
-    for (let i = 0; i < event.target.length; i++) {
-      workoutParams.push(event.target[i].value);
+    const workoutParams = {};
+    for (let i = 0; i < event.target.length - 1; i++) {
+      workoutParams[event.target[i].name] = Number(event.target[i].value);
     }
+    setWorkoutParams(workoutParams);
+    navigate("/current_workout");
   }
 
   return (
@@ -14,20 +18,20 @@ function WorkoutFormUI({}) {
       <div>This is an the form page</div>
       <br />
       <form onSubmit={handleSubmit}>
-        <label htmlFor="hang-time">Hang Time</label>
-        <input type="text" defaultValue="7" name="hang-time"></input>
+        <label htmlFor="hangTime">Hang Time</label>
+        <input type="text" defaultValue="7" name="hangTime"></input>
         <br />
-        <label htmlFor="down-time">Down Time</label>
-        <input type="text" defaultValue="3" name="down-time"></input>
+        <label htmlFor="downTime">Down Time</label>
+        <input type="text" defaultValue="3" name="downTime"></input>
         <br />
-        <label htmlFor="rest-time">Rest Time</label>
-        <input type="text" defaultValue="3" name="rest-time"></input>
+        <label htmlFor="restTime">Rest Time</label>
+        <input type="text" defaultValue="3" name="restTime"></input>
         <br />
-        <label htmlFor="rep-number">Reps</label>
-        <input type="text" defaultValue="3" name="rep-number"></input>
+        <label htmlFor="repsTotal">Reps</label>
+        <input type="text" defaultValue="3" name="repsTotal"></input>
         <br />
-        <label htmlFor="set-number">Sets</label>
-        <input type="text" defaultValue="4" name="set-number"></input>
+        <label htmlFor="setsTotal">Sets</label>
+        <input type="text" defaultValue="4" name="setsTotal"></input>
         <br />
         <button type="submit">Lets workout!</button>
       </form>

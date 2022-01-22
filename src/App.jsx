@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import WorkoutPageUI from "./components/WorkoutPageUI";
-import WorkoutFormUI from "./components/WorkoutFormUI";
+import WorkoutForm from "./containers/WorkoutForm";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           {/* <header className="App-header"></header> */}
           <Routes>
             <Route exact path="/current_workout" element={<WorkoutPageUI />} />
-            <Route path="*" element={<WorkoutFormUI />} />
+            <Route path="*" element={<WorkoutForm />} />
           </Routes>
         </div>
       </BrowserRouter>
