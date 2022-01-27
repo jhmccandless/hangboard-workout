@@ -18,14 +18,14 @@ function WorkoutFormUI({ setWorkoutParams, hangTime }) {
       <div>This is an the form page</div>
       <br />
       <form onSubmit={handleSubmit}>
-        <label htmlFor="hangTime">Hang Time</label>
+        <label htmlFor="hangTime">Hang Time (s)</label>
         <input type="text" defaultValue="7" name="hangTime"></input>
         <br />
-        <label htmlFor="downTime">Down Time</label>
+        <label htmlFor="downTime">Down Time (s)</label>
         <input type="text" defaultValue="3" name="downTime"></input>
         <br />
-        <label htmlFor="restTime">Rest Time</label>
-        <input type="text" defaultValue="180" name="restTime"></input>
+        <label htmlFor="restTime">Rest Time (min)</label>
+        <input type="text" defaultValue="3" name="restTime"></input>
         <br />
         <label htmlFor="repsTotal">Reps</label>
         <input type="text" defaultValue="6" name="repsTotal"></input>
