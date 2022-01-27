@@ -17,13 +17,15 @@ function HangUpUI({ hangTime, downTime, isHangActive }) {
         setIsOffTimeActive(true);
         setOnTime(hangTime);
       } else if (isOffTimeActive) {
-        setTimeout(() => {
+        const timer1 = setTimeout(() => {
           setOffTime((offTime) => offTime - 1);
         }, 1000);
+        return () => window.clearTimeout(timer1);
       } else if (isOnTimeActive) {
-        setTimeout(() => {
+        const timer2 = setTimeout(() => {
           setOnTime((onTime) => onTime - 1);
         }, 1000);
+        return () => window.clearTimeout(timer2);
       }
     } else if (!isHangActive) {
       setIsOnTimeActive(true);

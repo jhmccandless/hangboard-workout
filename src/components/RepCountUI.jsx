@@ -7,9 +7,10 @@ function RepCountUI({ repsTotal, isHangActive, eachRepTimer }) {
   const [repsCount, setRepsCount] = useState(repsTotal);
   useEffect(() => {
     if (isHangActive && repsCount > 0) {
-      setTimeout(() => {
+      const timer1 = setTimeout(() => {
         setRepsCount((repsCount) => repsCount - 1);
       }, timeoutTimer);
+      return () => window.clearTimeout(timer1);
     } else {
       setRepsCount(repsTotal);
     }
