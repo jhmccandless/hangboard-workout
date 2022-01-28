@@ -4,14 +4,15 @@ import SetTimer from "../containers/SetTimer";
 import RestTimer from "../containers/RestTimer";
 import CounterUI from "./CounterUI";
 
-function WorkoutPageUI({}) {
+function WorkoutPageUI({ setsTotal, repsTotal }) {
   return (
     <>
       <div>This is the workout page</div>
       {/* <HangUp />
       <SetTimer />
       <RestTimer /> */}
-      <CounterUI name={"Sets"} />
+      <CounterUI name={"Sets"} currentCount={setsTotal} />
+      <CounterUI name={"Reps"} currentCount={repsTotal} />
     </>
   );
 }

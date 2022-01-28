@@ -2,7 +2,11 @@ import { connect } from "react-redux";
 import WorkoutPageUI from "../components/WorkoutPageUI";
 
 function mapStateToProps(state) {
-  return {};
+  console.log(state.setsTotal);
+  return {
+    setsTotal: state.setsTotal,
+    repsTotal: state.repsTotal,
+  };
 }
 
 function mapDispatchToProps() {
