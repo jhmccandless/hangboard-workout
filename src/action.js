@@ -4,10 +4,9 @@ export function resetRestTimerAction(data) {
     data,
   };
 }
-export function resetHangTimerAction(data) {
+export function resetHangTimerAction() {
   return {
     type: "RESET_HANG_TIMER",
-    data,
   };
 }
 

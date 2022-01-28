@@ -14,8 +14,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    resetHangTimer: function (data) {
-      dispatch(resetHangTimerAction(data));
+    resetHangTimer: function () {
+      dispatch(resetHangTimerAction());
     },
   };
 }
