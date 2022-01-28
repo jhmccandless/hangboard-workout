@@ -21,13 +21,12 @@ function timers_reducer(state = initialState, action) {
         isRestActive: false,
       };
     case "RESET_HANG_TIMER":
-      let setsMinus = state.setsTotal--;
       return {
         ...state,
         totalTime: initialState.totalTime,
         isHangActive: false,
         isRestActive: true,
-        setsTotal: state.setsTotal--,
+        setsTotal: --state.setsTotal,
       };
     case "STOP_CIRCUIT":
       console.log("circuit stopped");
@@ -37,10 +36,9 @@ function timers_reducer(state = initialState, action) {
         isRestActive: false,
       };
     case "COUNTDOWN_REPS":
-      let repMinus = state.repsTotal--;
       return {
         ...state,
-        repsTotal: state.repsTotal--,
+        repsTotal: --state.repsTotal,
       };
     case "WORKOUT_PARAMS":
       return {

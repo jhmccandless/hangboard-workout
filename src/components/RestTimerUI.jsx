@@ -20,8 +20,8 @@ function RestTimerUI({
         setRestingTime((restingTime) => {
           return restingTime - 1;
         });
-        return () => window.clearTimeout(timer1);
       }, 1000);
+      return () => window.clearTimeout(timer1);
     }
   }, [
     restingTime,
@@ -40,6 +40,7 @@ function RestTimerUI({
   return (
     <>
       <h2>this is the rest timer</h2>
+      <div>rest timer: {restingTime}</div>
       <div>
         this is the rest timer: {`${restTimerMinutes}:${restTimerSeconds}`}{" "}
       </div>
