@@ -43,8 +43,6 @@ function RestTimerUI({
       <div>
         this is the rest timer: {`${restTimerMinutes}:${restTimerSeconds}`}{" "}
       </div>
-      {/* <div>this is the TRIAL Minutes: {restTimerMinutes} </div>
-      <div>this is the TRIAL seconds: {restTimerSeconds} </div> */}
       <div>number of sets left: {setsTotal} </div>
     </>
   );
