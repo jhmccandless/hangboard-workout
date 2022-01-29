@@ -3,7 +3,8 @@ import HangUp from "../containers/HangUp";
 import SetTimer from "../containers/SetTimer";
 import RestTimer from "../containers/RestTimer";
 import CounterUI from "./CounterUI";
-import TimerUI from "./TimerUI";
+import SecondsTimerUI from "./SecondsTimerUI";
+import MinutesTimerUI from "./MinutesTimerUI";
 
 function WorkoutPageUI({ setsTotal, repsTotal, restTime, hangTime, downTime }) {
   return (
@@ -12,9 +13,9 @@ function WorkoutPageUI({ setsTotal, repsTotal, restTime, hangTime, downTime }) {
       {/* <HangUp />
       <SetTimer />
       <RestTimer /> */}
-      <TimerUI timerName={"Hang Timer"} timerTime={hangTime} />
-      <TimerUI timerName={"Down Timer"} timerTime={downTime} />
-      <TimerUI timerName={"Rest Timer"} timerTime={restTime} />
+      <SecondsTimerUI timerName={"Hang Timer"} timerTime={hangTime} />
+      <SecondsTimerUI timerName={"Down Timer"} timerTime={downTime} />
+      <MinutesTimerUI timerName={"Rest Timer"} timerTime={restTime} />
       <CounterUI name={"Sets"} currentCount={setsTotal} />
       <CounterUI name={"Reps"} currentCount={repsTotal} />
     </>

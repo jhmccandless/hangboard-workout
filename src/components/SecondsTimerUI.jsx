@@ -1,19 +1,14 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-function TimerUI({ timerTime, timerName }) {
+function SecondsTimerUI({ timerTime, timerName }) {
   const [timer, setTimer] = useState(timerTime);
   useEffect(() => {}, []);
-
-  // let restTimerMinutes = Math.floor(timer / 60);
-  // let restTimerSeconds = (
-  //   `0` + Math.floor(timer - restTimerMinutes * 60)
-  // ).slice(-2);
 
   return (
     <>
       <div>
-        {timerName} Timer: {timer}
+        {timerName} Timer: {(`0` + Math.floor(timer)).slice(-2)}
       </div>
       {/* <div>
         {timerName} Timer: {restTimerMinutes}:{restTimerSeconds}
@@ -22,4 +17,4 @@ function TimerUI({ timerTime, timerName }) {
   );
 }
 
-export default TimerUI;
+export default SecondsTimerUI;
