@@ -2,10 +2,12 @@ import { connect } from "react-redux";
 import WorkoutPageUI from "../components/WorkoutPageUI";
 
 function mapStateToProps(state) {
-  console.log(state.setsTotal);
   return {
     setsTotal: state.setsTotal,
     repsTotal: state.repsTotal,
+    restTime: state.restTime,
+    hangTime: state.hangTime,
+    downTime: state.downTime,
   };
 }
 
