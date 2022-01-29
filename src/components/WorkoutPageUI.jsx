@@ -15,9 +15,9 @@ function WorkoutPageUI({ setsTotal, repsTotal, restTime, hangTime, downTime }) {
       <RestTimer /> */}
       <SecondsTimerUI timerName={"Hang Timer"} timerTime={hangTime} />
       <SecondsTimerUI timerName={"Down Timer"} timerTime={downTime} />
+      <CounterUI name={"Reps"} currentCount={repsTotal} />
       <MinutesTimerUI timerName={"Rest Timer"} timerTime={restTime} />
       <CounterUI name={"Sets"} currentCount={setsTotal} />
-      <CounterUI name={"Reps"} currentCount={repsTotal} />
     </>
   );
 }

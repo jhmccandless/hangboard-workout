@@ -8,8 +8,11 @@ function SecondsTimerUI({ timerTime, timerName }) {
   return (
     <>
       <div>
-        {timerName} Timer: {(`0` + Math.floor(timer)).slice(-2)}
+        {timerName}: {timer}
       </div>
+      {/* <div>
+        {timerName} Timer: {(`0` + Math.floor(timer)).slice(-2)}
+      </div> */}
       {/* <div>
         {timerName} Timer: {restTimerMinutes}:{restTimerSeconds}
       </div> */}

@@ -16,7 +16,7 @@ function MinutesTimerUI({ timerTime, timerName }) {
         {timerName} Timer: {timer}
       </div> */}
       <div>
-        {timerName} Timer: {restTimerMinutes}:{restTimerSeconds}
+        {timerName}: {restTimerMinutes}:{restTimerSeconds}
       </div>
     </>
   );
