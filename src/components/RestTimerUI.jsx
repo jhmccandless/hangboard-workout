@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import GetCountUI from "./GetCountUI";
 
 function RestTimerUI({
   restTime,
@@ -40,11 +41,12 @@ function RestTimerUI({
   return (
     <>
       {/* <h2>this is the rest timer</h2> */}
-      <div>rest timer: {restingTime}</div>
+      {/* <div>rest timer: {restingTime}</div> */}
       <div>
         this is the rest timer: {`${restTimerMinutes}:${restTimerSeconds}`}{" "}
       </div>
-      <div>number of sets left: {setsTotal} </div>
+      {/* <div>number of sets left: {setsTotal} </div> */}
+      <GetCountUI whichCount={"Sets"} countNumber={setsTotal} />
     </>
   );
 }

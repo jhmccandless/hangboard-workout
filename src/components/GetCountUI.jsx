@@ -1,9 +1,11 @@
 import React from "react";
 
-function GetCountUI() {
+function GetCountUI({ whichCount, countNumber }) {
   return (
     <>
-      <div>sets count</div>
+      <div>
+        {whichCount}: {countNumber}
+      </div>
     </>
   );
 }
