@@ -3,7 +3,12 @@ import { useState } from "react";
 
 function SecondsTimerUI({ timerTime, timerName }) {
   const [timer, setTimer] = useState(timerTime);
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const timerCountdown = setTimeout(() => {
+      setTimer(timer - 1);
+    }, 1000);
+    return () => window.clearTimeout(timerCountdown);
+  }, [timer]);
 
   return (
     <>

@@ -1,6 +1,8 @@
 import React from "react";
+import MinutesTimerUI from "./MinutesTimerUI";
 
-function CounterUI({ currentCount, name }) {
+function CounterUI({ currentCount, name, whichTimers }) {
+  console.log(whichTimers);
   return (
     <>
       <div>

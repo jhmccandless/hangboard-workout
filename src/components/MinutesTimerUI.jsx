@@ -3,6 +3,8 @@ import { useState } from "react";
 
 function MinutesTimerUI({ timerTime, timerName }) {
   const [timer, setTimer] = useState(timerTime * 60);
+  console.log(timer);
+  // const [isTimerActive, setIsTimerActive] = useState(false);
   useEffect(() => {}, []);
 
   let restTimerMinutes = Math.floor(timer / 60);
