@@ -7,9 +7,15 @@ function WorkoutPageUI() {
   return (
     <>
       <div>This is the workout page</div>
-      <HangUp />
-      <SetTimer />
-      <RestTimer />
+      <div>
+        This is the Reps Box
+        <SetTimer />
+        <HangUp />
+      </div>
+      <div>
+        Rest Box
+        <RestTimer />
+      </div>
     </>
   );
 }

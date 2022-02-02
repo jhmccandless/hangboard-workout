@@ -39,7 +39,7 @@ function RestTimerUI({
 
   return (
     <>
-      <h2>this is the rest timer</h2>
+      {/* <h2>this is the rest timer</h2> */}
       <div>rest timer: {restingTime}</div>
       <div>
         this is the rest timer: {`${restTimerMinutes}:${restTimerSeconds}`}{" "}

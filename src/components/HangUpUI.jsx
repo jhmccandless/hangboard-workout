@@ -45,7 +45,7 @@ function HangUpUI({ hangTime, downTime, isHangActive }) {
 
   return (
     <>
-      <h2>hang on and off timers</h2>
+      {/* <h2>hang on and off timers</h2> */}
       <div>this is the Hang on timer: {onTime}</div>
       <div>this is the down timer: {offTime}</div>
       <RepCount />
