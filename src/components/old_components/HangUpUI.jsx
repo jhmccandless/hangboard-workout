@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import RepCount from "../containers/RepCount";
+import RepCount from "../../containers/RepCount";
 
 function HangUpUI({ hangTime, downTime, isHangActive }) {
   const [onTime, setOnTime] = useState(hangTime);

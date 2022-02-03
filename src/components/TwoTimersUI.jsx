@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RepCount from "../containers/RepCount";
 
-function HangUpUI({ whichTimer1, whichTimer2, timerStop }) {
+function TwoTimersUI({ whichTimer1, whichTimer2, timerStop, whichCountdown }) {
   const [timer1, setTimer1] = useState(whichTimer1);
   const [isTimer1Active, setIsTimer1Active] = useState(true);
   const [timer2, setTimer2] = useState(whichTimer2);
@@ -16,6 +16,7 @@ function HangUpUI({ whichTimer1, whichTimer2, timerStop }) {
         setIsTimer1Active(false);
         setIsTimer2Active(true);
         setTimer1(whichTimer1);
+        // whichCountdown();
       } else if (isTimer2Active) {
         const timer1 = setTimeout(() => {
           setTimer2((timer2) => timer2 - 1);
@@ -48,9 +49,9 @@ function HangUpUI({ whichTimer1, whichTimer2, timerStop }) {
       {/* <h2>hang on and off timers</h2> */}
       <div>this is the Hang on timer: {timer1}</div>
       <div>this is the down timer: {timer2}</div>
-      <RepCount />
+      {/* <RepCount /> */}
     </>
   );
 }
 
-export default HangUpUI;
+export default TwoTimersUI;
