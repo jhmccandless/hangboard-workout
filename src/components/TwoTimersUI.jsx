@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RepCount from "../containers/RepCount";
 
-function TwoTimersUI({ whichTimer1, whichTimer2, timerStop, whichCountdown }) {
+function TwoTimersUI({ whichTimer1, whichTimer2, timerStop }) {
   const [timer1, setTimer1] = useState(whichTimer1);
   const [isTimer1Active, setIsTimer1Active] = useState(true);
   const [timer2, setTimer2] = useState(whichTimer2);
@@ -16,7 +16,6 @@ function TwoTimersUI({ whichTimer1, whichTimer2, timerStop, whichCountdown }) {
         setIsTimer1Active(false);
         setIsTimer2Active(true);
         setTimer1(whichTimer1);
-        // whichCountdown();
       } else if (isTimer2Active) {
         const timer1 = setTimeout(() => {
           setTimer2((timer2) => timer2 - 1);

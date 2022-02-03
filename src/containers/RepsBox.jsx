@@ -1,6 +1,6 @@
 import RepsBoxUI from "../components/RepsBoxUI";
 import { connect } from "react-redux";
-import { countdownRepsAction } from "../action";
+import { countdownRepsAction, resetHangTimerAction } from "../action";
 
 function mapStateToProps(state) {
   return {
@@ -16,6 +16,9 @@ function mapDispatchToProps(dispatch) {
   return {
     countdownReps: function () {
       dispatch(countdownRepsAction());
+    },
+    resetHangTimer: function (data) {
+      dispatch(resetHangTimerAction(data));
     },
   };
 }
