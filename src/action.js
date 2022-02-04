@@ -1,13 +1,11 @@
-export function resetRestTimerAction(data) {
+export function resetRestTimerAction() {
   return {
     type: "RESET_REST_TIMER",
-    data,
   };
 }
-export function resetHangTimerAction(data) {
+export function resetHangTimerAction() {
   return {
     type: "RESET_HANG_TIMER",
-    data,
   };
 }
 
@@ -23,9 +21,8 @@ export function countdownRepsAction() {
   };
 }
 
-export function setWorkoutParamsAction(data) {
+export function setWorkoutParamsAction() {
   return {
     type: "WORKOUT_PARAMS",
-    data,
   };
 }

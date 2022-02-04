@@ -2,24 +2,23 @@ import React from "react";
 import SetTimer from "../containers/SetTimer";
 import RestTimer from "../containers/RestTimer";
 import RepsBox from "../containers/RepsBox";
+import RestBox from "../containers/RestBox";
+import SetComp from "../containers/SetComp";
 
 function WorkoutPageUI({}) {
   return (
     <>
-      <RepsBox />
+      {/* <RepsBox />
+      <RestBox />
       <br />
       <br />
       <br />
-      <br />
-      <div>This is the workout page</div>
-      <div>
-        This is the Reps Box
-        <SetTimer />
-      </div>
-      <div>
+      <br /> */}
+      <SetComp />
+      {/* <div>
         Rest Box
         <RestTimer />
-      </div>
+      </div> */}
     </>
   );
 }

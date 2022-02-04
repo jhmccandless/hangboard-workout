@@ -4,9 +4,9 @@ const initialState = {
   totalTime: null,
   hangTime: 1,
   downTime: 2,
-  restTime: 10,
-  setsTotal: 3,
-  repsTotal: 7,
+  restTime: 1,
+  setsTotal: 1,
+  repsTotal: 2,
 };
 
 function timers_reducer(state = initialState, action) {

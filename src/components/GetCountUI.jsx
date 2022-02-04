@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-function GetCountUI({ count, countStop, eachRepTimer }) {
-  const timeoutTimer = 1000 * eachRepTimer;
+function GetCountUI({ count, countStop, timerTotal }) {
+  const timeoutTimer = 1000 * timerTotal;
   const [repsCount, setRepsCount] = useState(count);
   useEffect(() => {
     if (countStop && repsCount > 0) {

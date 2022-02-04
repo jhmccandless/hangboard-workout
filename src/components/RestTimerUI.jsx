@@ -10,28 +10,48 @@ function RestTimerUI({
 }) {
   const [restingTime, setRestingTime] = useState(restTime * 60);
 
+  // useEffect(() => {
+  //   if (setsTotal <= 0) {
+  //     stopCircuit();
+  //   } else if (restingTime <= 0) {
+  //     setRestingTime(restTime);
+  //     resetRestTimer();
+  //   } else if (isRestActive) {
+  //     const timer1 = setTimeout(() => {
+  //       setRestingTime((restingTime) => {
+  //         return restingTime - 1;
+  //       });
+  //     }, 1000);
+  //     return () => window.clearTimeout(timer1);
+  //   }
+  // }, [
+  //   restingTime,
+  //   restTime,
+  //   isRestActive,
+  //   resetRestTimer,
+  //   setsTotal,
+  //   stopCircuit,
+  // ]);
+
+  /*
+  function TimerUI({ timerActivator, whichTimerReset, timerTotal, count }) {
+  // console.log(whichTimerReset);
+  const repsTimer = timerTotal * count;
+  const [time, setTime] = useState(repsTimer);
   useEffect(() => {
-    if (setsTotal <= 0) {
-      stopCircuit();
-    } else if (restingTime <= 0) {
-      setRestingTime(restTime);
-      resetRestTimer();
-    } else if (isRestActive) {
+    if (time <= 0) {
+      setTime(repsTimer);
+      whichTimerReset();
+    } else if (timerActivator) {
       const timer1 = setTimeout(() => {
-        setRestingTime((restingTime) => {
-          return restingTime - 1;
+        setTime((time) => {
+          return time - 1;
         });
       }, 1000);
       return () => window.clearTimeout(timer1);
     }
-  }, [
-    restingTime,
-    restTime,
-    isRestActive,
-    resetRestTimer,
-    setsTotal,
-    stopCircuit,
-  ]);
+  }, [time, timerActivator, whichTimerReset, repsTimer]);
+  */
 
   let restTimerMinutes = Math.floor(restingTime / 60);
   let restTimerSeconds = (
@@ -46,7 +66,7 @@ function RestTimerUI({
         this is the rest timer: {`${restTimerMinutes}:${restTimerSeconds}`}{" "}
       </div>
       {/* <div>number of sets left: {setsTotal} </div> */}
-      <GetCountUI whichCount={"Sets"} countNumber={setsTotal} />
+      {/* <GetCountUI whichCount={"Sets"} countNumber={setsTotal} /> */}
     </>
   );
 }

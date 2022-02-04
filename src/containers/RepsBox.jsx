@@ -17,8 +17,8 @@ function mapDispatchToProps(dispatch) {
     countdownReps: function () {
       dispatch(countdownRepsAction());
     },
-    resetHangTimer: function (data) {
-      dispatch(resetHangTimerAction(data));
+    resetHangTimer: function () {
+      dispatch(resetHangTimerAction());
     },
   };
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import TwoTimersUI from "./TwoTimersUI";
-import RepCount from "../containers/RepCount";
 import GetCountUI from "./GetCountUI";
 import TimerUI from "./TimerUI";
 
@@ -14,7 +13,7 @@ function RepsBoxUI({
 }) {
   return (
     <>
-      <h2>This is the Reps Box</h2>
+      <h3>This is the Reps Box</h3>
       <TwoTimersUI
         whichTimer1={hangTime}
         whichTimer2={downTime}
@@ -24,7 +23,7 @@ function RepsBoxUI({
       <GetCountUI
         count={repsTotal}
         countStop={isHangActive}
-        eachRepTimer={downTime + hangTime}
+        timerTotal={downTime + hangTime}
       />
       <TimerUI
         timerTotal={downTime + hangTime}
@@ -32,10 +31,6 @@ function RepsBoxUI({
         timerActivator={isHangActive}
         whichTimerReset={resetHangTimer}
       />
-
-      {/* 
-        >>>>>>>>>timer
-         */}
     </>
   );
 }

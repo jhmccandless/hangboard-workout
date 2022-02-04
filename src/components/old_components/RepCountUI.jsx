@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import GetCountUI from "./GetCountUI";
+import GetCountUI from "../GetCountUI";
 
 function RepCountUI({ repsTotal, isHangActive, eachRepTimer }) {
   const timeoutTimer = 1000 * eachRepTimer;

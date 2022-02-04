@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import RepCount from "../containers/RepCount";
 
 function TwoTimersUI({ whichTimer1, whichTimer2, timerStop }) {
   const [timer1, setTimer1] = useState(whichTimer1);
