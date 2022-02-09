@@ -1,4 +1,4 @@
-import RepCountUI from "../components/RepCountUI";
+import RepCountUI from "../../components/old_components/RepCountUI";
 import { connect } from "react-redux";
 
 function mapStateToProps(state) {

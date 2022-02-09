@@ -1,14 +1,14 @@
+import RepsBoxUI from "../components/RepsBoxUI";
 import { connect } from "react-redux";
-import SetTimerUI from "../components/SetTimerUI";
-import { resetHangTimerAction } from "../action";
+import { countdownRepsAction, resetHangTimerAction } from "../action";
 
 function mapStateToProps(state) {
   return {
-    totalTime: state.totalTime,
-    isHangActive: state.isHangActive,
-    hangTime: state.hangTime,
     downTime: state.downTime,
+    hangTime: state.hangTime,
+    isHangActive: state.isHangActive,
     repsTotal: state.repsTotal,
+    totalTime: state.totalTime,
   };
 }
 
@@ -20,9 +20,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-const connectedSetTimerUI = connect(
+const connectedRepsBoxUI = connect(
   mapStateToProps,
   mapDispatchToProps
-)(SetTimerUI);
+)(RepsBoxUI);
 
-export default connectedSetTimerUI;
+export default connectedRepsBoxUI;

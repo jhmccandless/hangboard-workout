@@ -14,11 +14,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    resetRestTimer: function (data) {
-      dispatch(resetRestTimerAction(data));
-    },
-    stopCircuit: function (data) {
-      dispatch(stopCircuitAction(data));
+    resetRestTimer: function () {
+      dispatch(resetRestTimerAction());
     },
   };
 }

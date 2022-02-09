@@ -25,7 +25,6 @@ function SetTimerUI({
   }, [setTime, isHangActive, resetHangTimer, repsTimer]);
   return (
     <>
-      <h2>This is the set timer</h2>
       <div>this is the timer: {setTime}</div>
     </>
   );
