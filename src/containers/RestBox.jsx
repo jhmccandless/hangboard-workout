@@ -1,14 +1,11 @@
 import RestBoxUI from "../components/RestBoxUI";
 import { connect } from "react-redux";
-import { resetRestTimerAction, stopCircuitAction } from "../action";
+import { resetRestTimerAction } from "../action";
 
 function mapStateToProps(state) {
   return {
     restTime: state.restTime,
-    totalTime: state.totalTime,
     isRestActive: state.isRestActive,
-    isHangActive: state.isHangActive,
-    setsTotal: state.setsTotal,
   };
 }
 
@@ -17,9 +14,6 @@ function mapDispatchToProps(dispatch) {
     resetRestTimer: function (data) {
       dispatch(resetRestTimerAction(data));
     },
-    // stopCircuit: function (data) {
-    //   dispatch(stopCircuitAction(data));
-    // },
   };
 }
 

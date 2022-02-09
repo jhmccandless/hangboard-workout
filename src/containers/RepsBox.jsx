@@ -14,9 +14,6 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    countdownReps: function () {
-      dispatch(countdownRepsAction());
-    },
     resetHangTimer: function () {
       dispatch(resetHangTimerAction());
     },

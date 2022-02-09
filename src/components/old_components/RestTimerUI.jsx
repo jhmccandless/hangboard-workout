@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import GetCountUI from "./GetCountUI";
+import GetCountUI from "../GetCountUI";
 
 function RestTimerUI({
   restTime,

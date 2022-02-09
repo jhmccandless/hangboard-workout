@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import SetTimerUI from "../components/SetTimerUI";
-import { resetHangTimerAction } from "../action";
+import SetTimerUI from "../../components/old_components/SetTimerUI";
+import { resetHangTimerAction } from "../../action";
 
 function mapStateToProps(state) {
   return {

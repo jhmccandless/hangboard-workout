@@ -8,7 +8,6 @@ function TimerUI({
   stopCircuit,
   overallTimer,
 }) {
-  // console.log(whichTimerReset);
   const ifCount = count ? count : 60;
   const fullTime = timerTotal * ifCount;
   const [time, setTime] = useState(fullTime);
@@ -29,7 +28,6 @@ function TimerUI({
   }, [time, timerActivator, whichTimerReset, fullTime]);
   return (
     <>
-      {/* <h2>This is the set timer</h2> */}
       <div>this is the timer: {time}</div>
     </>
   );

@@ -44,10 +44,8 @@ function TwoTimersUI({ whichTimer1, whichTimer2, timerStop }) {
 
   return (
     <>
-      {/* <h2>hang on and off timers</h2> */}
       <div>this is the Hang on timer: {timer1}</div>
       <div>this is the down timer: {timer2}</div>
-      {/* <RepCount /> */}
     </>
   );
 }

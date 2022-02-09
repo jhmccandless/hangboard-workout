@@ -17,9 +17,6 @@ function mapDispatchToProps(dispatch) {
     resetRestTimer: function () {
       dispatch(resetRestTimerAction());
     },
-    // stopCircuit: function (data) {
-    //   dispatch(stopCircuitAction(data));
-    // },
   };
 }
 

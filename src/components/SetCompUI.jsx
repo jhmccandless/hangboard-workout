@@ -26,7 +26,6 @@ function SetCompUI({
         stopCircuit={stopCircuit}
       />
       <GetCountUI count={setsTotal} />
-      {/* Total time for entire workout, ending the whole workout, sets count */}
       <RepsBox />
       <RestBox />
     </>
