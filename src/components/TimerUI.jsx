@@ -26,9 +26,18 @@ function TimerUI({
       return () => window.clearTimeout(timer1);
     }
   }, [time, timerActivator, whichTimerReset, fullTime]);
+
+  function secondsToMinutesTimer(totalSeconds) {
+    let timerMinutes = Math.floor(totalSeconds / 60);
+    let timerSeconds = (
+      `0` + Math.floor(totalSeconds - timerMinutes * 60)
+    ).slice(-2);
+    return timerMinutes + ":" + timerSeconds;
+  }
+
   return (
     <>
-      <div>this is the timer: {time}</div>
+      <div>this is the timer: {secondsToMinutesTimer(time)}</div>
     </>
   );
 }

@@ -2,11 +2,11 @@ const initialState = {
   isHangActive: true,
   isRestActive: false,
   totalTime: null,
-  hangTime: 1,
-  downTime: 2,
-  restTime: 1,
-  setsTotal: 1,
-  repsTotal: 2,
+  hangTime: 7,
+  downTime: 3,
+  restTime: 4,
+  setsTotal: 4,
+  repsTotal: 6,
 };
 
 function timers_reducer(state = initialState, action) {
