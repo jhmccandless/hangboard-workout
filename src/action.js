@@ -21,8 +21,9 @@ export function countdownRepsAction() {
   };
 }
 
-export function setWorkoutParamsAction() {
+export function setWorkoutParamsAction(data) {
   return {
     type: "WORKOUT_PARAMS",
+    data,
   };
 }
