@@ -7,6 +7,7 @@ function TwoTimersUI({ whichTimer1, whichTimer2, timerStop }) {
   const [isTimer2Active, setIsTimer2Active] = useState(false);
   useEffect(() => {
     if (timerStop) {
+      // timerStop boolean for which timer these two timers are references too equal to the (sum of the two timers * reps).
       if (timer2 <= 0) {
         setIsTimer2Active(false);
         setIsTimer1Active(true);
@@ -27,6 +28,7 @@ function TwoTimersUI({ whichTimer1, whichTimer2, timerStop }) {
         return () => window.clearTimeout(timer2);
       }
     } else if (!timerStop) {
+      // if the refernce timer is done
       setIsTimer1Active(true);
       setIsTimer2Active(false);
       setTimer2(whichTimer2);
