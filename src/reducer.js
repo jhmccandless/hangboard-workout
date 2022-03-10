@@ -11,7 +11,6 @@ const initialState = {
 
 function timers_reducer(state = initialState, action) {
   console.log(action);
-  //   console.table(state);
   switch (action.type) {
     case "RESET_REST_TIMER":
       return {

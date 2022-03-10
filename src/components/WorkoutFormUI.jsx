@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function WorkoutFormUI({ setWorkoutParams, hangTime }) {
+function WorkoutFormUI({ setWorkoutParams }) {
   const navigate = useNavigate();
   function handleSubmit(event) {
     event.preventDefault();
