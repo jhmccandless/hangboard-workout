@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function WorkoutFormUI({ setWorkoutParams, hangTime }) {
+function WorkoutFormUI({ setWorkoutParams }) {
   const navigate = useNavigate();
   function handleSubmit(event) {
     event.preventDefault();
@@ -19,19 +19,19 @@ function WorkoutFormUI({ setWorkoutParams, hangTime }) {
       <br />
       <form onSubmit={handleSubmit}>
         <label htmlFor="hangTime">Hang Time (s)</label>
-        <input type="text" defaultValue="3" name="hangTime"></input>
+        <input type="text" defaultValue="7" name="hangTime"></input>
         <br />
         <label htmlFor="downTime">Down Time (s)</label>
-        <input type="text" defaultValue="2" name="downTime"></input>
+        <input type="text" defaultValue="3" name="downTime"></input>
         <br />
         <label htmlFor="restTime">Rest Time (min)</label>
-        <input type="text" defaultValue="1" name="restTime"></input>
+        <input type="text" defaultValue="4" name="restTime"></input>
         <br />
         <label htmlFor="repsTotal">Reps</label>
-        <input type="text" defaultValue="2" name="repsTotal"></input>
+        <input type="text" defaultValue="6" name="repsTotal"></input>
         <br />
         <label htmlFor="setsTotal">Sets</label>
-        <input type="text" defaultValue="2" name="setsTotal"></input>
+        <input type="text" defaultValue="4" name="setsTotal"></input>
         <br />
         <button type="submit">Lets workout!</button>
       </form>

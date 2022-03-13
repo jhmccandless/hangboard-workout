@@ -1,5 +1,4 @@
 import React from "react";
-import GetCountUI from "./GetCountUI";
 import TimerUI from "./TimerUI";
 
 function RestBoxUI({ restTime, isRestActive, resetRestTimer }) {

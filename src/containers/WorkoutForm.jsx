@@ -3,9 +3,7 @@ import WorkoutFormUI from "../components/WorkoutFormUI";
 import { setWorkoutParamsAction } from "../action";
 
 function mapStateToProps(state) {
-  return {
-    hangTime: state.hangTime,
-  };
+  return {};
 }
 
 function mapDispatchToProps(dispatch) {
